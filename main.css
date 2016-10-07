@@ -1,0 +1,640 @@
+html,
+body {
+    height: 100%;
+    min-height: 100%;
+    /* for firefox */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: regular;
+    color: #DAD6BE;
+    background: black;
+    background: url(images/wood.jpg) no-repeat center center fixed;
+    background-size: cover;
+    cursor: default;
+}
+
+
+/******************
+FONTS
+******************/
+
+@font-face {
+    font-family: regular;
+    src: url(./fonts/Dosis-Regular.otf);
+}
+
+@font-face {
+    font-family: mySecondFont;
+    src: url(./fonts/AlexBrush-Regular.ttf);
+}
+
+@font-face {
+    font-family: myThirdFont;
+    src: url(./fonts/CaviarDreams.ttf);
+}
+
+@font-face {
+    font-family: rust;
+    src: url(./fonts/Ultra.ttf);
+    font-weight: bold;
+}
+
+
+/************************
+ Links etc.
+*************************/
+
+a {
+    cursor: pointer;
+    color: #cfd2c8;
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:hover {
+    color: #D30000;
+}
+
+h1,
+h2,
+h3 {
+    color: #fbab1e;
+    font-family: rust;
+}
+
+
+/************************
+wrappers and containers
+*************************/
+
+.wrapper,
+.footer-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/************************
+        Header
+*************************/
+
+
+/*logo*/
+
+.logo {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    top: -100px;
+    left: 50px;
+}
+
+
+/*Navigation*/
+
+.nav-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.85);
+    position: absolute;
+    top: 50px;
+}
+
+.inside-nav-bar li {
+    display: inline;
+    margin: 10px;
+    padding: 32px 0;
+}
+
+.inside-nav-bar {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-line-pack: end;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    top: 50px;
+    font-size: 1.5em;
+}
+
+.active {
+    border-top: 3px solid #D30000;
+    border-bottom: 3px solid #D30000;
+    color: #d30000;
+}
+
+.inside-nav-bar li:hover {
+    border-top: 3px solid #D30000;
+    border-bottom: 3px solid #D30000;
+}
+
+
+/*Top Contact*/
+
+.top-contact,
+.top-contact-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    text-align: right;
+}
+
+.menu-button {
+    display: none;
+    /*    display none above 800px*/
+}
+
+.top-contact ul,
+.top-contact-menu ul {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    height: 50px;
+}
+
+.top-contact li,
+.top-contact-menu li {
+    -ms-flex-item-align: center;
+    -webkit-align-self: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    margin: 10px;
+    color: #DAD6BE;
+}
+
+.top-contact li a,
+.top-contact-menu li a {
+    color: #DAD6BE;
+}
+
+.top-contact li a:hover {
+    color: firebrick;
+}
+
+.menu {
+    display: none;
+}
+
+
+/************************
+        Content/About
+*************************/
+
+.content {
+    margin: -50px 5px 0 5px;
+    ;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.content h1 {
+    text-align: center;
+}
+
+.paras {
+    padding: 50px;
+    font-size: 1.5em
+}
+
+.paras a:first-child {
+    color: #D30000;
+}
+
+.paras a:first-child:hover {
+    color: deepskyblue;
+}
+
+
+/************************
+        Sauces
+*************************/
+
+
+/*
+.sauces {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    margin: 10px;
+    padding-top: 40px; 
+    
+}
+
+.sauces div {
+    margin: 5px;
+    margin: 0 auto;
+}
+
+.sauces h3 {
+    text-align: center;
+}
+
+*/
+
+
+/************************
+        Sauces 2
+*************************/
+
+.price {
+    text-align: center;
+    width: 100%;
+    margin: 20px;
+}
+
+.sauces {
+    text-align: center;
+    padding: 10px 0;
+    margin: 30px 0;
+    border: 1px solid red;
+    background-color: black;
+    font-size: 1.2em
+}
+
+.sauces ul {
+    margin: 0 20px;
+}
+
+
+/************************
+        Plates
+*************************/
+
+.plates-paras p {
+    text-align: center;
+}
+
+.barbed-wire {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    top: 20px;
+    background: url(/images/barbed-wire-big.png);
+}
+
+.kitchen {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 30px 30px 30px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.kitchen h2 {
+    padding-bottom: 15px;
+    margin: 0 auto;
+    font-family: rust;
+}
+
+.container {
+    width: 70%;
+    padding: 30px 0px;
+    margin: 0 auto;
+}
+
+.align {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.sides,
+.meal-sauces,
+.meats {
+    border: 1px solid red;
+    background-color: black;
+    padding: 20px;
+}
+
+.meats ul {
+    margin: 20px;
+}
+
+.meal-sauces ul {
+    margin: 0 20px;
+}
+
+.plates-height {
+    padding-bottom: 1px;
+    /*    only way to get bottom padding*/
+}
+
+
+/************************
+        Contact
+*************************/
+
+.contact h1 {
+    padding-bottom: 20px;
+}
+
+.contact p {
+    text-align: center;
+}
+
+.phone-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    list-style: none;
+    padding: 20px 0;
+    margin: 50px 0;
+    border: 1px solid red;
+    background-color: black;
+}
+
+.phone-wrapper ul {
+    margin: 20px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.address-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    list-style: none;
+    padding: 20px 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.address ul {
+    padding: 20px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.social-wrapper {
+    padding: 20px 0;
+    -ms-flex-flow: column;
+    flex-flow: column;
+}
+
+.social-wrapper div {
+    margin: 10px;
+}
+
+.social ul {
+    display: inline;
+}
+
+.social li {
+    display: inline;
+    margin: 10px;
+}
+
+.social i {}
+
+
+/************************
+        Footer
+*************************/
+
+.footer {
+    position: absolute;
+    left: 0;
+    padding: 20px;
+}
+
+.footer span {
+    font-family: mySecondFont;
+    font-size: 1.5em;
+}
+
+.footer span a:hover {
+    color: deepskyblue;
+}
+
+
+/******************************
+  Media Queries  Desktop First
+*******************************/
+
+
+/* Large screens up to 1830px ----------- */
+
+@media (max-width: 1830px) {}
+
+
+/* Mid size screens up to 1550px ----------- */
+
+@media (max-width: 1550px) {}
+
+
+/* Mid size screens up to 1265px ----------- */
+
+@media (max-width: 1265px) {}
+
+
+/* Screens up to 1120px ----------- */
+
+@media (max-width: 1120px) {}
+
+
+/* Screens up to 1050px ----------- */
+
+@media (max-width: 1050px) {}
+
+
+/* Screens up to 945px ----------- */
+
+@media (max-width: 945px) {}
+
+
+/* Screens up to 800px ----------- */
+
+
+/*Switch to mobile here*/
+
+@media (max-width: 800px) {
+    .logo {
+        top: 0;
+        margin: 0 auto;
+        left: 0;
+    }
+    .top-contact {
+        display: none;
+    }
+    .nav-bar,
+    .inside-nav-bar {
+        display: none;
+    }
+    .content {
+        margin-top: 20px;
+    }
+    .menu-button {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 95px;
+        height: 40px;
+        /*        background-color: rgba(0, 0, 0, 0.5);*/
+        background-color: firebrick;
+        color: black;
+        border-radius: 5px;
+        margin: 10px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        z-index: 888;
+        position: absolute;
+    }
+    .menu-button:hover {
+        cursor: pointer;
+    }
+    .menu-button i {
+        padding: 5px;
+    }
+    .menu {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index: 3;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        font-size: 2.5em;
+    }
+    .toggle {
+        bottom: 950px;
+    }
+    .top-contact-menu {
+        font-size: .4em;
+    }
+}
+
+
+/* Screens up to 700px ----------- */
+
+@media (max-width: 700px) {}
+
+
+/* Screens up to 700px ----------- */
+
+@media (max-width: 700px) {}
+
+
+/* Screens up to 650px ----------- */
+
+@media (max-width: 650px) {}
+
+
+/* Screens up to 600px ----------- */
+
+@media (max-width: 600px) {
+    .paras {
+        padding: 30px;
+        font-size: 1.3em;
+    }
+    .container,
+    .meats-wrapper {
+        width: 100%;
+    }
+    .barbed-wire {
+        width: 100%;
+        height: 30px;
+        position: relative;
+        top: 20px;
+        background: url(/images/barbed-wire-small.png);
+    }
+}
+
+
+/* Screens up to 550px ----------- */
+
+@media (max-width: 550px) {
+    .logo {
+        margin-top: 70px;
+    }
+    .about {
+        margin-top: 100px;
+    }
+}
+
+
+/* Screens up to 450px ----------- */
+
+@media (max-width: 450px) {
+    .top-contact-menu {
+        margin-top: 70px;
+    }
+    .kitchen {
+        margin: 15px;
+    }
+    .top-contact-menu li {
+        margin: 05px;
+    }
+}
+
+
+/* Screens up to 350px ----------- */
+
+@media (max-width: 350px) {
+    .top-contact-menu li:nth-child(1) {
+        display: none;
+    }
+    .top-contact-menu li:nth-child(4) {
+        position: relative;
+        top: -70px;
+    }
+}
